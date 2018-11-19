@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><h1>Student Infomation</h1></title>
+    <style>
+            th, td, p, input {
+                font:14px Verdana;
+            }
+            table, th, td 
+            {
+                border: solid 1px #DDD;
+                border-collapse: collapse;
+                padding: 2px 3px;
+                text-align: center;
+            }
+            th {
+                font-weight:bold;
+            }
+        </style>
+</head>
+<body>
+        <h1>Student Infomation</h1>
+<table id = "Student input">
+    <tr>
+        <td><div>Name</div></td>
+        <td><input type = "text" id = "StudentName"></td> 
+    </tr>
+    <tr>
+        <td><div>ID No.</div></td>
+        <td><input type = "Student" id = "StudentID"></td> 
+    </tr>
+    <tr>
+        <td><div>Branch</div></td>
+        <td><select name="select" id="branchopt">
+           <option type="chechbox" name="a" id="option1">CSE
+           <option type="chechbox" name="b" id="option2">ISE
+           <option type="chechbox" name="c" id="option3">EEE
+           <option type="chechbox" name="d" id="option4">ECE
+           <option type="chechbox" name="e" id="option5">Mech
+        </select></td>> 
+    </tr>
+    <tr>
+        <td><div>Year</div></td>
+        <td><select name="select" id="yearopt">
+        <option type="radio" name="a" id="option1">1
+        <option type="radio" name="a" id="option2">2
+        <option type="radio" name="a" id="option3">3
+        <option type="radio" name="a" id="option4">4 
+        </select></td>
+    </tr>
+    <tr>
+        <td>No of Backlogs</td>
+        <td><select name="select" id="backopt">
+            <option type="radio" name="b" id="option1">0
+            <option type="radio" name="b" id="option1">1
+            <option type="radio" name="b" id="option2">2
+            <option type="radio" name="b" id="option3">3
+            <option type="radio" name="b" id="option4">4+
+        </select></td>
+    </tr>
+</table>
+<br>
+<br>
+<td><button type = "button" > Validate </button></td>
+
+<input type="text" id="userInput"=>give me input</input>
+    <button onclick="test()">Submit</button>
+    <script>
+        function test()
+        {
+            var userInput = document.getElementById("userInput").value;
+            document.write(userInput);
+        }
+    </script>
+
+
+
+</body>
+</table>
+</html>

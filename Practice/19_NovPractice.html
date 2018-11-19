@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Addition of two numbers</title></head>
+    <body>
+    FirstNumber : <input id = "FirstNumber" type = "number"  required/><br>
+    <br>
+    SecondNumber : <input id = "SecondNumber" type = "number"  required/>
+    <br>
+    sum : <br><input type = "text" id = "sum" name ="result box">
+    <button type="button" id="bt" value="Add" onclick="add()"/>Add
+ 
+    
+    <script>
+        function add(){
+        var a = Number(document.getElementById("FirstNumber").value);
+        var b = Number(document.getElementById("SecondNumber").value);
+        var sum = a+b;
+        document.getElementById("sum").value=sum;}
+    </script>
+    </body>
+</html>
