@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Table</title>
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+button{
+    border-radius: 5px;
+    height: 15px;
+    width: 100px;
+    text-align: center;
+    background-color: #5499C7;
+    font-size: 10px;
+    color: #ffffff;
+    }
+  input{
+    height: 15px;
+    font-size: 10px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+}
+th {
+    background-color: #5499C7;
+    color: white;
+    font-style: bold;
+    font-size: 10px;
+}
+</style>
+</head>
+    
+        <div style="margin-top: 50px; margin-left: 250px; margin-right: 250px;">
+    <button>Create Table</button>
+<input type="text" id="search" placeholder="Search data here....."></input>
+    <div id="tableDiv" style="margin-top: 40px">
+        Table will gentare here.
+    </div>
+</div>
+<p id="p1"></p>
+
+<script >
+      var json_obj  = '{"Match" :[{"TeamOne" : [{"TeamName" : "India","PlayersOfTeam" :[{"Player1":[{"PlayerName":"MSDhoni","IsCaptain" : true,"IsBowler" : true,"IsBatsMan" : true,"IsAllRounder" : true,"IsWicketKeeper" : true}]},{"Player2":[{"PlayerName":"Litesh","IsCaptain" : false,"IsBowler" : true,"IsBatsMan" : false,"IsAllRounder" : false,"IsWicketKeeper" : false}]},{"Player3":[{"PlayerName":"Shubam","IsCaptain" : false,"IsBowler" : true,"IsBatsMan" : false,"IsAllRounder" : false,"IsWicketKeeper" : false}]},{"Player4":[{"PlayerName":"Akshaya","IsCaptain" : false,"IsBowler" : true,"IsBatsMan" : true,"IsAllRounder" : true,"IsWicketKeeper" : false}]},{"Player5":[{"PlayerName":"Venkata Bhargav","IsCaptain" : false,"IsBowler" : true,"IsBatsMan" : true,"IsAllRounder" : true,"IsWicketKeeper" : true}]}]}]},{"TeamTwo" :[{"TeamName" : "Pakistan","PlayersOfTeam" :[{"Player1":[{"PlayerName":"MSDhoni","IsCaptain" : true,"IsBowler" : true,"IsBatsMan" : true,"IsAllRounder" : true,"IsWicketKeeper" : true}]},{"Player2":[{"PlayerName":"Litesh","IsCaptain" : false,"IsBowler" : true,"IsBatsMan" : false,"IsAllRounder" : false,"IsWicketKeeper" : false}]},{"Player3":[{"PlayerName":"Shubam","IsCaptain" : false,"IsBowler" : true,"IsBatsMan" : false,"IsAllRounder" : false,"IsWicketKeeper" : false}]},{"Player4":[{"PlayerName":"Akshaya","IsCaptain" : false,"IsBowler" : true,"IsBatsMan" : true,"IsAllRounder" : true,"IsWicketKeeper" : false}]},{"Player5":[{"PlayerName":"Venkata Bhargav","IsCaptain" : false,"IsBowler" : true,"IsBatsMan" : true,"IsAllRounder" : true,"IsWicketKeeper" : true}]}]}]}]}';
+       var j = JSON.parse(json_obj);
+
+        // $(document).ready(function(){
+        //     $("button").click(function(){
+        //       var number_of_rows = j.length;
+        //       var k = 0;
+        //       var table_body = '<table border="1" id="example"><thead><tr><th>PlayerName</th><th>IsCaptain</th><th>IsBowler</th><th>IsBatsMan</th><th>IsAllRounder</th><th>IsWicketKeeper</th></tr></thead><tbody>';
+        //       for(j in j.length){
+        //       for(i =0;i<j.length;i++){
+        //             table_body+='<tr>';
+        //             table_body +='<td>';
+        //             table_body +=j.TeamOne[k]["TeamName"];
+        //             table_body +='</td>';
+                   
+        //             table_body +='<td>';
+        //             table_body +=j.TeamOne[k].PlayersOfTeam[i];
+        //             table_body +='</td>';
+                
+        //             table_body+='</tr>';
+        //       }
+        //       k++;
+
+// for search function.................................. only............................
+        $("#search").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("table tr").filter(function(index) {
+          if(index>0){
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    }
+    });
+});
+//=================End=========================End===============================
+        });
+        </script>
+        </html>

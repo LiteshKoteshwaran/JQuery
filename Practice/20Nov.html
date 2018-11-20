@@ -1,0 +1,59 @@
+<html>
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+        <head></head>
+        <body>
+               <p>If you click on me, I will disappear.</p>
+                <p>Click me away!</p>
+                <p>Click me too!</p>
+           
+            <p id = one>this is of id(P)</p>
+            <p class = two>this is class(P)</p>
+            <h1 id = three>324234243this is id(h)</h1>
+            <h1 id = three3>this is id(h)2</h1>
+             <h1 class = four>this is class(h) 4</h1> 
+             
+            <button class = "P">click to hide P</button>
+            <button class = "PID">hide P(id)</button>
+            <button class = "Pc">hide P(class)</button>
+            <button id = "HID">hide H(id)</button>
+            <button class = "HC">hide H(class)</button>
+        </body>
+        <script>
+
+            $(function(){
+    $("p").on("click",function(){
+        $(this).hide();
+    });
+});
+
+            $(function(){
+    $("button.P").on("click",function(){
+        $(this).hide();
+    });
+});
+$(function(){
+    $("button.PID").click(function(){
+        $("#one").hide();
+    });
+});
+$(function(){
+    $("button.Pc").click(function(){
+        $(".two").hide();
+    });
+});
+$(function(){
+    $("#HID").hover(function(){
+    alert("You entered p1!");
+});
+});
+$(function(){
+    $("button.HC").dblclick(function(){
+        $("*").hide();
+    });
+});
+
+        </script>
+</html>
